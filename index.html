@@ -922,8 +922,8 @@
     <div class="card-title">VA Society Blueprint: Live Cohort</div>
     <p class="card-desc">Build a professional virtual assistant business, step by step &mdash; even if you're starting from scratch.</p>
     <div class="price-row">
-      <span class="price">$349</span>
-      <span class="price-was">$649</span>
+      <span class="price">$500</span>
+      <span class="price-was">$700</span>
       <span class="rating">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg>
         5.0
@@ -935,7 +935,30 @@
       <li><span class="mod-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>Module 3: How to Find, Approach &amp; Win Clients</li>
       <li><span class="mod-icon locked"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>+3 More</li>
     </ul>
-    <a href="#" class="btn btn-ocean cta-placeholder">Now Open</a>
+    <button type="button" class="btn btn-ocean" id="waitlist-toggle" aria-expanded="false" aria-controls="waitlist-form">Join Waitlist</button>
+    <form class="lead-form" id="waitlist-form" action="https://30505711.sibforms.com/serve/MUIFAMSiPfe5U8fAmK1up1qxb1CntsBARyBoHR-6VDpsFWmQJYMWQbysaqipRBwf5OfAENq5NTksz7F6iYGj08qmuI0IHtHs7QOPKZuu-R7QiLZJtfJNDMFNW4PN01Uk1cxYKn8s6TH7nK4lkZLR7uUK4VvdYscgB04hyt6yWgHaJYGZ8zNAAdoLSSGhmW9E6gUk3QPrpax54wxduA==" method="post" target="brevo-waitlist-iframe" novalidate hidden>
+      <div class="field">
+        <label for="wl-first-name">First name <span class="req">*</span></label>
+        <input id="wl-first-name" name="FIRSTNAME" type="text" placeholder="Enter your first name" autocomplete="given-name" required>
+      </div>
+      <div class="field">
+        <label for="wl-email">Email <span class="req">*</span></label>
+        <input id="wl-email" name="EMAIL" type="email" placeholder="Enter your email" autocomplete="email" required>
+      </div>
+      <label class="consent">
+        <input id="wl-consent" type="checkbox">
+        I agree to receive updates from The Virtual Assistant Society.
+      </label>
+      <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;">
+      <input type="hidden" name="locale" value="en">
+      <input type="hidden" name="html_type" value="simple">
+      <button type="submit" class="btn btn-ocean" id="wl-submit">Reserve My Spot</button>
+    </form>
+    <div class="success" id="waitlist-success">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.3l2.3 2.3 4.7-5"/></svg>
+      <div class="card-title" style="font-size:16px;">You're on the waitlist</div>
+      <p>Thank you! I'll email you as soon as the next VA Society Blueprint cohort opens. Check your Spam and Promotions folders for my email.</p>
+    </div>
     <div class="btn-row">
       <a href="#" class="btn btn-ghost cta-placeholder">Learn More
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
@@ -1000,6 +1023,7 @@
 
 <div class="toast" id="toast">Link coming soon &mdash; check back shortly</div>
 
+<iframe name="brevo-waitlist-iframe" title="waitlist submission target" style="display:none;" tabindex="-1" aria-hidden="true"></iframe>
 <iframe name="brevo-hidden-iframe" title="form submission target" style="display:none;" tabindex="-1" aria-hidden="true"></iframe>
 
 <script>
@@ -1130,6 +1154,33 @@
     });
     renderCalendar();
   }
+})();
+
+(function(){
+  var toggle=document.getElementById('waitlist-toggle');
+  var wf=document.getElementById('waitlist-form');
+  var ws=document.getElementById('waitlist-success');
+  if(!toggle||!wf) return;
+  toggle.addEventListener('click',function(){
+    var open=wf.hidden;
+    wf.hidden=!open;
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+    if(open){ var f=document.getElementById('wl-first-name'); if(f) f.focus(); }
+  });
+  function toast(m){ var t=document.getElementById('toast'); if(!t) return; t.textContent=m; t.classList.add('show'); setTimeout(function(){t.classList.remove('show');},2400); }
+  wf.addEventListener('submit',function(e){
+    var fn=document.getElementById('wl-first-name').value.trim();
+    var em=document.getElementById('wl-email').value.trim();
+    var ok=document.getElementById('wl-consent').checked;
+    if(!fn||!em||em.indexOf('@')<1){ e.preventDefault(); toast('Please enter your first name and a valid email'); return; }
+    if(!ok){ e.preventDefault(); toast('Please check the box to receive updates'); return; }
+    var frame=document.getElementsByName('brevo-waitlist-iframe')[0];
+    var done=false;
+    frame.addEventListener('load',function(){
+      if(done) return; done=true;
+      wf.hidden=true; toggle.hidden=true; ws.classList.add('show');
+    });
+  });
 })();
 </script>
 </body></html>
