@@ -945,6 +945,14 @@
         <label for="wl-email">Email <span class="req">*</span></label>
         <input id="wl-email" name="EMAIL" type="email" placeholder="Enter your email" autocomplete="email" required>
       </div>
+      <div class="field">
+        <label for="wl-industry">What's your current profession or industry? <span class="req">*</span></label>
+        <select id="wl-industry" name="INDUSTRY" required><option value="" disabled selected>Select one</option><option value="1">Healthcare</option><option value="2">Education</option><option value="3">Finance &amp; Banking</option><option value="4">Real Estate</option><option value="5">Retail &amp; E-commerce</option><option value="6">Technology</option><option value="7">Marketing &amp; Advertising</option><option value="8">Hospitality &amp; Travel</option><option value="9">Legal</option><option value="10">Nonprofit &amp; Religious</option><option value="11">Government</option><option value="12">Construction &amp; Trades</option><option value="13">Manufacturing</option><option value="14">Customer Service</option><option value="15">Administrative / Office Support</option><option value="16">Self-Employed / Freelance</option><option value="17">Student</option><option value="18">Not Currently Working</option><option value="19">Other</option></select>
+      </div>
+      <div class="field">
+        <label for="wl-experience">How many years of experience do you have as an EA? <span class="req">*</span></label>
+        <select id="wl-experience" name="EA_EXPERIENCE" required><option value="" disabled selected>Select one</option><option value="1">0 years</option><option value="2">1-5 years</option><option value="3">6-10 years</option><option value="4">10+ years</option></select>
+      </div>
       <label class="consent">
         <input id="wl-consent" type="checkbox">
         I agree to receive updates from The Virtual Assistant Society.
@@ -1173,6 +1181,7 @@
     var em=document.getElementById('wl-email').value.trim();
     var ok=document.getElementById('wl-consent').checked;
     if(!fn||!em||em.indexOf('@')<1){ e.preventDefault(); toast('Please enter your first name and a valid email'); return; }
+    if(!document.getElementById('wl-industry').value||!document.getElementById('wl-experience').value){ e.preventDefault(); toast('Please answer both questions'); return; }
     if(!ok){ e.preventDefault(); toast('Please check the box to receive updates'); return; }
     var frame=document.getElementsByName('brevo-waitlist-iframe')[0];
     var done=false;
