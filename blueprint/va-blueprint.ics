@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//The Virtual Assistant Society//VA Blueprint//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:va-blueprint-20261105@virtualmediahive.com
+DTSTAMP:20261029T010000Z
+DTSTART:20261106T010000Z
+DTEND:20261106T030000Z
+SUMMARY:The Virtual Assistant Blueprint with Georgandez
+DESCRIPTION:Free live class on Riverside. Join with the personal link Riverside emailed you\, or register here: https://riverside.com/webinar/registration/eyJldmVudElkIjoiNmFlMjk1NmQ0ZDE2NGQ5YzlmYWI3OTExIiwic2x1ZyI6Imdlb3JnYW5kZXotbW9ycmlzb25zLXN0dWRpbyJ9
+LOCATION:Riverside (online)
+URL:https://riverside.com/webinar/registration/eyJldmVudElkIjoiNmFlMjk1NmQ0ZDE2NGQ5YzlmYWI3OTExIiwic2x1ZyI6Imdlb3JnYW5kZXotbW9ycmlzb25zLXN0dWRpbyJ9
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:The VA Blueprint starts in 1 hour
+END:VALARM
+END:VEVENT
+END:VCALENDAR
