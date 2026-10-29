@@ -393,7 +393,10 @@ footer{background:var(--ink);color:#D9CFC4;padding:48px 0}
   }
   form.addEventListener('submit',function(ev){
     if(!valid()){ev.preventDefault(); var b=form.querySelector('.field.bad input, .field.bad select'); if(b) b.focus(); return;}
-    form.SMS.value=form.SMS.value.replace(/\D/g,'').replace(/^0+/,'');
+    var cc=form.SMS__COUNTRY_CODE.value.replace(/\D/g,''); var d=form.SMS.value.replace(/\D/g,'').replace(/^0+/,'');
+    if(d.indexOf(cc)===0 && d.length-cc.length>=7){ d=d.slice(cc.length); }
+    else if(cc.length===4 && cc[0]==='1' && d.indexOf(cc.slice(1))===0 && d.length===10){ d=d.slice(3); }
+    form.SMS.value=d;
     errBox.classList.remove('show');
     btn.disabled=true; btn.textContent='Saving your seat...';
     submitted=true;
