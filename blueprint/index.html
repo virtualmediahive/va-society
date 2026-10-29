@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Virtual Assistant Blueprint | Free Live Class</title>
+<meta name="description" content="A free live class with Georgandez Morrison: launch your VA career, build a portfolio that gets replies, land your first client and work from anywhere.">
+<meta property="og:title" content="The Virtual Assistant Blueprint | Free Live Class">
+<meta property="og:description" content="Launch your VA career, build a portfolio that gets replies, and land your first client. Free and live on November 5.">
+<meta property="og:image" content="img/georgandez.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,800&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --ocean:#0E5D74;--ocean-deep:#083A49;--ocean-tint:#E1EEF0;
+  --choc:#6E3B1E;--mustard:#E2B44C;--mustard-soft:#F1D9A0;
+  --ink:#17120F;--ink-2:#3E352F;--ink-soft:#5C5048;--ink-faint:#6B5F52;
+  --cream:#F6F1E7;--cream-2:#FBF7EF;--line:#E4D9C7;--line-2:#D9CCB7;
+  --serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--ocean)}
+h1,h2,h3{font-family:var(--serif);margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--choc)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:14px;font-weight:800;font-size:17px;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:transform .15s ease,filter .15s ease}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.05)}
+.btn-gold{background:var(--mustard);color:var(--ink)}
+.btn-ocean{background:var(--ocean);color:#fff;width:100%}
+.ico{width:18px;height:18px;flex:none}
+:focus-visible{outline:2px solid var(--mustard);outline-offset:3px}
+
+/* nav + hero */
+.top{background:var(--ocean-deep);color:#fff}
+.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:700;font-size:19px}
+.nav .btn{min-height:44px;padding:0 20px;font-size:14px;border-radius:999px}
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:56px;padding:40px 0 96px}
+.hero-copy{flex:999 1 520px;min-width:0;display:flex;flex-direction:column;gap:24px}
+.pill{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.1);font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--mustard)}
+.hero h1{font-weight:800;font-size:clamp(42px,6vw,76px);line-height:1.02;letter-spacing:-.02em}
+.hero h1 span{color:var(--mustard)}
+.hero .lede{font-size:clamp(17px,2vw,20px);line-height:1.55;color:#D6E6EA;max-width:560px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.ghost{display:inline-flex;align-items:center;min-height:56px;padding:0 18px;color:#fff;font-weight:700}
+.meta{display:flex;flex-wrap:wrap;gap:12px 24px;font-size:15px;color:#D6E6EA}
+.meta div{display:flex;align-items:center;gap:8px}
+.hero-photo{flex:1 1 320px;min-width:0;display:flex;justify-content:center}
+.photo-frame{position:relative;width:100%;max-width:420px}
+.photo-frame .img{aspect-ratio:4/5;border-radius:28px;overflow:hidden;border:6px solid var(--mustard);background:var(--ocean)}
+.photo-frame img{width:100%;height:100%;object-fit:cover}
+.name-tag{position:absolute;left:-12px;bottom:28px;background:#fff;color:var(--ink);border-radius:16px;padding:14px 18px;box-shadow:0 18px 40px -16px rgba(0,0,0,.5);display:flex;flex-direction:column;gap:2px}
+.name-tag b{font-family:var(--serif);font-size:17px}
+.name-tag span{font-size:13px;color:var(--ink-soft)}
+
+/* proof */
+.proof{margin:-44px auto 0;background:#fff;border-radius:22px;box-shadow:0 20px 44px -24px rgba(23,18,15,.35);padding:28px 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;position:relative}
+.proof b{display:block;font-family:var(--serif);font-weight:800;font-size:34px;color:var(--ocean)}
+.proof span{font-size:15px;color:var(--ink-soft)}
+
+section{padding:88px 0}
+.head{display:flex;flex-direction:column;gap:14px;max-width:720px;margin-bottom:40px}
+.head h2{font-weight:700;font-size:clamp(32px,4vw,48px);line-height:1.1}
+.head p{font-size:18px;line-height:1.6;color:var(--ink-soft)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.card .num{font-family:var(--serif);font-weight:800;font-size:40px;color:var(--mustard);line-height:1}
+.card h3{font-size:22px}
+.card p{font-size:16px;line-height:1.6;color:var(--ink-soft)}
+
+/* who */
+.who{background:var(--choc);color:#fff;border-radius:28px;padding:48px clamp(24px,4vw,56px);display:flex;flex-wrap:wrap;gap:40px}
+.who>div{flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.who .kicker{color:var(--mustard-soft)}
+.who h2{font-weight:700;font-size:clamp(30px,3.5vw,42px);line-height:1.12}
+.who p{font-size:17px;line-height:1.6;color:#F3E6DA}
+.check{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:16px;padding:16px 18px;font-size:16px;line-height:1.5}
+.check svg{width:22px;height:22px;flex:none;margin-top:2px}
+
+/* about */
+.about{display:flex;flex-wrap:wrap;align-items:center;gap:56px}
+.about>div{flex:1 1 420px;min-width:0}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:18px}
+.about-copy{display:flex;flex-direction:column;gap:18px}
+.about-copy h2{font-weight:700;font-size:clamp(30px,3.5vw,44px);line-height:1.1}
+.about-copy p{font-size:17px;line-height:1.7;color:var(--ink-2)}
+.about-copy .tag{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--ocean);line-height:1.4}
+
+/* includes */
+.includes{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:80px 0}
+.includes h2{text-align:center;font-weight:700;font-size:clamp(30px,3.5vw,42px);margin-bottom:36px}
+.inc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:860px;margin:0 auto}
+.inc{display:flex;gap:16px;align-items:flex-start}
+.inc .badge{flex:none;width:52px;height:52px;border-radius:14px;background:var(--ocean-tint);display:grid;place-items:center}
+.inc h3{font-family:var(--sans);font-size:18px;font-weight:800;margin-bottom:6px}
+.inc p{font-size:15px;line-height:1.6;color:var(--ink-soft)}
+
+/* register */
+.reg{display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start}
+.reg-copy{flex:1 1 360px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.reg-copy h2{font-weight:700;font-size:clamp(32px,4vw,48px);line-height:1.08}
+.reg-copy p{font-size:17px;line-height:1.6;color:var(--ink-soft)}
+.reg-copy .meta{color:var(--ink);font-size:16px;flex-direction:column;gap:10px}
+.formcard{flex:1 1 440px;min-width:0;background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,32px);box-shadow:0 24px 50px -28px rgba(23,18,15,.4)}
+form{display:flex;flex-direction:column;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:14px;font-weight:700;color:var(--ink-2)}
+.field .opt{font-weight:500;color:var(--ink-faint)}
+.field input,.field select{width:100%;min-height:50px;padding:0 14px;border:1px solid var(--line-2);border-radius:12px;background:var(--cream-2);font-size:16px;color:var(--ink);font-family:inherit}
+.field select{appearance:none;-webkit-appearance:none;padding-right:38px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235C5048' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px}
+.field input:focus,.field select:focus{outline:2px solid var(--ocean);outline-offset:1px}
+.field.bad input,.field.bad select{border-color:#B3261E}
+.help{font-size:13px;line-height:1.5;color:var(--ink-faint)}
+.err{font-size:13px;color:#B3261E;display:none}
+.field.bad .err{display:block}
+.phone{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:8px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.fine{font-size:12.5px;line-height:1.5;color:var(--ink-faint);text-align:center}
+.done{display:none;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:24px 8px}
+.done.show{display:flex}
+.done .ok{width:64px;height:64px;border-radius:50%;background:var(--ocean-tint);display:grid;place-items:center}
+.done h3{font-size:28px}
+.done p{font-size:16px;line-height:1.6;color:var(--ink-soft);max-width:340px}
+.form-error{display:none;font-size:14px;color:#B3261E;text-align:center}
+.form-error.show{display:block}
+
+/* faq */
+.faq{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.faq h2{text-align:center;font-weight:700;font-size:clamp(28px,3vw,38px);margin-bottom:12px}
+details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+summary{cursor:pointer;font-size:17px;font-weight:800}
+details p{margin-top:12px;font-size:16px;line-height:1.6;color:var(--ink-soft)}
+
+footer{background:var(--ink);color:#D9CFC4;padding:48px 0}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
+.foot b{display:block;font-family:var(--serif);font-size:19px;color:#fff;margin-bottom:6px}
+.foot nav{display:flex;flex-wrap:wrap;gap:20px;font-size:15px;font-weight:700}
+.foot nav a{color:var(--mustard)}
+
+@media (max-width:560px){
+  section{padding:64px 0}
+  .hero{padding:24px 0 80px;gap:40px}
+  .name-tag{left:8px}
+  .proof{padding:24px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E2B44C" stroke-width="2" stroke-linecap="round"><path d="M2 15c2-2.5 4-2.5 6 0s4 2.5 6 0 4-2.5 6 0"/><path d="M2 9c2-2.5 4-2.5 6 0s4 2.5 6 0 4-2.5 6 0"/></svg>
+        <span>The Virtual Assistant Society</span>
+      </div>
+      <a class="btn btn-gold" href="#register">Save my free seat</a>
+    </div>
+    <div class="hero">
+      <div class="hero-copy">
+        <div class="pill"><span class="dot"></span><span>Free live class · Thursday, November 5</span></div>
+        <h1>The Virtual Assistant <span>Blueprint</span></h1>
+        <p class="lede">Ready to turn your skills into a remote career? In one live session I'll show you how to launch your VA career, put together a portfolio clients actually respond to, and land your first paying clients, from anywhere in the world.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#register">Reserve my free seat</a>
+          <a class="ghost" href="#learn">See what we'll cover</a>
+        </div>
+        <div class="meta">
+          <div><svg class="ico" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#E2B44C" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-when>Nov 5 · [TIME + TIMEZONE]</span></div>
+          <div><svg class="ico" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#E2B44C" stroke-width="2" stroke-linecap="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg><span>Live online on Riverside</span></div>
+          <div><svg class="ico" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#E2B44C" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span>$0, completely free</span></div>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <div class="img"><img src="img/georgandez.jpg" alt="Georgandez Morrison, founder of The Virtual Assistant Society" width="400" height="400"></div>
+          <div class="name-tag"><b>Georgandez Morrison</b><span>Founder, Virtual Media Hive</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="proof">
+    <div><b>8+ years</b><span>working remotely as a VA and executive assistant</span></div>
+    <div><b>5 countries</b><span>clients across the US, Canada, UK, Dubai and Australia</span></div>
+    <div><b>Top 20</b><span>Virtual Media Hive, ranked among the Caribbean's top VA agencies</span></div>
+  </div>
+</div>
+
+<section id="learn">
+  <div class="wrap">
+    <div class="head">
+      <span class="kicker">Inside the live class</span>
+      <h2>Four things you'll walk away knowing how to do</h2>
+      <p>No fluff, no theory for the sake of theory. This is the exact path I'd take if I were starting my VA business again today.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="num">01</span><h3>Start your VA career</h3><p>Pick the services you'll offer, set your first rates with confidence, and get your business set up the right way from day one.</p></div>
+      <div class="card"><span class="num">02</span><h3>Build a portfolio that gets replies</h3><p>No clients yet? No problem. Learn how to create proof of your skills that makes a busy founder say "let's talk."</p></div>
+      <div class="card"><span class="num">03</span><h3>Land your first client</h3><p>Where to find them, what to say in your outreach, and how to turn a discovery call into a signed client.</p></div>
+      <div class="card"><span class="num">04</span><h3>Work from anywhere</h3><p>How to set up your systems so your income travels with you, whether you're home in Jamaica or on a beach in Morocco.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="who">
+    <div>
+      <span class="kicker">Who this is for</span>
+      <h2>This class is for the serious ones.</h2>
+      <p>It's free, but it isn't casual. If any of these sound like you, this class was made for you.</p>
+    </div>
+    <div>
+      <div class="check"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#E2B44C" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span>You have administrative experience or an admin background: office work, reception, customer service, executive support</span></div>
+      <div class="check"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#E2B44C" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span>You want to work remotely and earn from anywhere, not just "someday"</span></div>
+      <div class="check"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#E2B44C" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span>You're organized, reliable and the person everyone counts on to keep things running</span></div>
+      <div class="check"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#E2B44C" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span>You're ready to turn those skills into your own business with your own clients</span></div>
+      <div class="check"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#E2B44C" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg><span>You'll show up live, take notes and ask questions</span></div>
+      <div class="check"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#F1D9A0" stroke-width="2.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg><span>Not for anyone looking for a get-rich-quick shortcut</span></div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap about">
+    <div class="gallery">
+      <img src="img/surf.jpg" alt="Surf trip by the beach" loading="lazy" width="480" height="480">
+      <img src="img/chefchaouen.jpg" alt="Family day in Chefchaouen, Morocco" loading="lazy" width="480" height="480">
+      <img src="img/desert.jpg" alt="Camel trek in the desert" loading="lazy" width="480" height="480">
+      <img src="img/medellin.jpg" alt="Family night out in Medellín" loading="lazy" width="480" height="480">
+    </div>
+    <div class="about-copy">
+      <span class="kicker">Your teacher</span>
+      <h2>Hey, I'm Georgandez.</h2>
+      <p>I'm a Christian, a husband, a dad, and the founder of Virtual Media Hive. For more than eight years I've supported CEOs, international companies and well-known names from my home base in Mandeville, Jamaica, managing inboxes, calendars, social media and everything in between.</p>
+      <p>That work has paid for surf trips, family adventures across Morocco and Colombia, and a life I actually get to design. I built The Virtual Assistant Society to hand you the same blueprint.</p>
+      <p class="tag">Work from anywhere. Earn in any currency. That's the plan.</p>
+    </div>
+  </div>
+</section>
+
+<div class="includes">
+  <div class="wrap">
+    <h2>Your seat includes</h2>
+    <div class="inc-grid">
+      <div class="inc"><div class="badge"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0E5D74" stroke-width="2" stroke-linecap="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg></div><div><h3>Live teaching</h3><p>The full Blueprint, taught live with real examples from my own client work.</p></div></div>
+      <div class="inc"><div class="badge"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0E5D74" stroke-width="2" stroke-linecap="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></div><div><h3>Live Q&amp;A</h3><p>Bring your questions about rates, clients and tools. We'll work through them together.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<section id="register">
+  <div class="wrap reg">
+    <div class="reg-copy">
+      <span class="kicker">Reserve your seat</span>
+      <h2>See you live on November 5.</h2>
+      <p>Drop your details and I'll send the class link and a calendar invite straight to your inbox.</p>
+      <div class="meta">
+        <div><svg class="ico" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#0E5D74" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span data-when>Thursday, November 5 · [TIME + TIMEZONE]</span></div>
+        <div><svg class="ico" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#0E5D74" stroke-width="2" stroke-linecap="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg><span>Live online on Riverside</span></div>
+      </div>
+    </div>
+
+    <div class="formcard">
+      <form id="signup" method="post" target="brevo-frame" novalidate
+            action="https://30505711.sibforms.com/serve/MUIFAL9vHaYNiFJ5LDKn3REJ-NDwUz5igAlKHS7zgu8X4xGlFJ8mxsG_D3B6_Cr5BX8pIO_YXQTOWpOE1UkFgU86rEs4jfcZznr6JZOW0u75WhnhEM2RZrd3ftRkMrcuaNFbUMU_cYpVEt7mPWsi9b55bRkJcihLXB8OmrllHMoe4Tn2lubiPRys-KYPLf_KOlF6VuE2JMHt6DOcgQ==">
+        <div class="field">
+          <label for="f-name">First name</label>
+          <input id="f-name" name="FIRSTNAME" type="text" autocomplete="given-name" placeholder="Your first name" required>
+          <span class="err">Please add your first name.</span>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="EMAIL" type="email" autocomplete="email" placeholder="you@email.com" required>
+          <span class="err">Please enter a valid email.</span>
+        </div>
+        <div class="field">
+          <label for="f-phone">Cell phone number</label>
+          <div class="phone">
+            <select id="f-cc" name="SMS__COUNTRY_CODE" aria-label="Country code" required>
+              <option value="+1876">Jamaica +1876</option>
+              <option value="+1">US / Canada +1</option>
+              <option value="+44">UK +44</option>
+              <option value="+1868">Trinidad &amp; Tobago +1868</option>
+              <option value="+1242">Bahamas +1242</option>
+              <option value="+1246">Barbados +1246</option>
+              <option value="+1345">Cayman Islands +1345</option>
+              <option value="+1268">Antigua &amp; Barbuda +1268</option>
+              <option value="+1758">St. Lucia +1758</option>
+              <option value="+1784">St. Vincent +1784</option>
+              <option value="+1473">Grenada +1473</option>
+              <option value="+1767">Dominica +1767</option>
+              <option value="+1869">St. Kitts &amp; Nevis +1869</option>
+              <option value="+592">Guyana +592</option>
+              <option value="+501">Belize +501</option>
+              <option value="+1809">Dominican Rep. +1809</option>
+              <option value="+509">Haiti +509</option>
+              <option value="+234">Nigeria +234</option>
+              <option value="+233">Ghana +233</option>
+              <option value="+254">Kenya +254</option>
+              <option value="+27">South Africa +27</option>
+              <option value="+63">Philippines +63</option>
+              <option value="+91">India +91</option>
+              <option value="+971">UAE +971</option>
+              <option value="+61">Australia +61</option>
+            </select>
+            <input id="f-phone" name="SMS" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="Your number" required>
+          </div>
+          <span class="help">We'll use this to text you a reminder on the day of the class so you don't miss it.</span>
+          <span class="err">Please enter your cell number.</span>
+        </div>
+        <div class="field">
+          <label for="f-admin">Do you have administrative experience?</label>
+          <select id="f-admin" name="ADMIN_EXPERIENCE" required>
+            <option value="">Choose one</option>
+            <option value="1">Yes, I've worked in admin</option>
+            <option value="2">Some, I'm still building it</option>
+            <option value="3">Not yet, but I'm ready to learn</option>
+          </select>
+          <span class="err">Please choose one.</span>
+        </div>
+        <div class="field">
+          <label for="f-goal">What's your #1 goal for this class? <span class="opt">(optional)</span></label>
+          <input id="f-goal" name="CLASS_GOAL" type="text" placeholder="e.g. land my first client" maxlength="200">
+        </div>
+        <input class="hp" type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="html_type" value="simple">
+        <button class="btn btn-ocean" type="submit" id="submit-btn">Save my free seat</button>
+        <p class="form-error" id="form-error" role="alert">Something went wrong. Please try again in a moment.</p>
+        <p class="fine">Free. No card needed. By signing up you agree to get emails about this class and a text reminder on the day. Message and data rates may apply. Unsubscribe anytime.</p>
+      </form>
+      <div class="done" id="done" role="status" aria-live="polite">
+        <div class="ok"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0E5D74" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3>You're in!</h3>
+        <p>Check your inbox for the class link and your calendar invite. If you don't see it in a few minutes, check your Promotions or Spam folder. I'll see you live on Nov 5.</p>
+      </div>
+      <iframe name="brevo-frame" id="brevo-frame" title="Form submission" style="display:none"></iframe>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap faq">
+    <h2>Questions</h2>
+    <details><summary>Is it really free?</summary><p>Yes. No card, no catch. This is my first live class, and I'm opening it up for free to people who are serious about getting started.</p></details>
+    <details><summary>How do I get the class link?</summary><p>As soon as you sign up, you'll get a welcome email with the class link and a calendar invite, so it's saved and you won't miss it.</p></details>
+    <details><summary>Where is the class held?</summary><p>Live online on Riverside. You'll join right from your browser on a laptop or phone, no download needed.</p></details>
+    <details><summary>Do I need client experience?</summary><p>No. An admin background helps, but you don't need past clients. Bring a laptop, a notebook and an open mind. We'll build from where you are.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><b>The Virtual Assistant Society</b><span>Work from anywhere. Earn in any currency.</span></div>
+    <nav aria-label="Social links">
+      <a href="https://instagram.com/georgandez">Instagram</a>
+      <a href="https://tiktok.com/@georgandez">TikTok</a>
+      <a href="https://linkedin.com/in/georgandez-morrison">LinkedIn</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form=document.getElementById('signup');
+  var frame=document.getElementById('brevo-frame');
+  var done=document.getElementById('done');
+  var btn=document.getElementById('submit-btn');
+  var errBox=document.getElementById('form-error');
+  var submitted=false, timer=null;
+
+  function setBad(el,bad){var f=el.closest('.field'); if(f) f.classList.toggle('bad',bad);}
+  function valid(){
+    var ok=true;
+    var name=form.FIRSTNAME, email=form.EMAIL, phone=form.SMS, admin=form.ADMIN_EXPERIENCE;
+    var n=name.value.trim().length>0; setBad(name,!n); ok=ok&&n;
+    var e=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()); setBad(email,!e); ok=ok&&e;
+    var digits=phone.value.replace(/\D/g,''); var p=digits.length>=7&&digits.length<=12; setBad(phone,!p); ok=ok&&p;
+    var a=admin.value!==''; setBad(admin,!a); ok=ok&&a;
+    return ok;
+  }
+  form.addEventListener('submit',function(ev){
+    if(!valid()){ev.preventDefault(); var b=form.querySelector('.field.bad input, .field.bad select'); if(b) b.focus(); return;}
+    form.SMS.value=form.SMS.value.replace(/\D/g,'').replace(/^0+/,'');
+    errBox.classList.remove('show');
+    btn.disabled=true; btn.textContent='Saving your seat...';
+    submitted=true;
+    clearTimeout(timer);
+    timer=setTimeout(function(){ if(submitted){ showDone(); } },6000);
+  });
+  frame.addEventListener('load',function(){ if(submitted){ showDone(); } });
+  function showDone(){ submitted=false; clearTimeout(timer); form.style.display='none'; done.classList.add('show'); done.scrollIntoView({behavior:'smooth',block:'center'}); }
+  ['FIRSTNAME','EMAIL','SMS','ADMIN_EXPERIENCE'].forEach(function(n){ form[n].addEventListener('input',function(){ setBad(form[n],false); }); form[n].addEventListener('change',function(){ setBad(form[n],false); }); });
+})();
+</script>
+</body>
+</html>
