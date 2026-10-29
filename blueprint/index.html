@@ -19,6 +19,7 @@
   --serif:'Fraunces',Georgia,serif;--sans:'Manrope',system-ui,-apple-system,sans-serif;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
@@ -263,7 +264,7 @@ footer{background:var(--ink);color:#D9CFC4;padding:48px 0}
     <div class="reg-copy">
       <span class="kicker">Reserve your seat</span>
       <h2>See you live on November 5.</h2>
-      <p>Drop your details below. Then claim your seat on Riverside to get your personal join link and calendar invite.</p>
+      <p>Drop your details below and you're in. Your personal join link and calendar invite land in your inbox right after.</p>
       <div class="meta">
         <div><svg class="ico" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#0E5D74" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span>Thursday, November 5 · 8 to 10 PM Eastern (EST)</span></div>
         <div><svg class="ico" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="#0E5D74" stroke-width="2" stroke-linecap="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3"/></svg><span>Live online on Riverside</span></div>
@@ -277,6 +278,11 @@ footer{background:var(--ink);color:#D9CFC4;padding:48px 0}
           <label for="f-name">First name</label>
           <input id="f-name" name="FIRSTNAME" type="text" autocomplete="given-name" placeholder="Your first name" required>
           <span class="err">Please add your first name.</span>
+        </div>
+        <div class="field">
+          <label for="f-last">Last name</label>
+          <input id="f-last" type="text" autocomplete="family-name" placeholder="Your last name" required>
+          <span class="err">Please add your last name.</span>
         </div>
         <div class="field">
           <label for="f-email">Email</label>
@@ -341,10 +347,11 @@ footer{background:var(--ink);color:#D9CFC4;padding:48px 0}
       </form>
       <div class="done" id="done" role="status" aria-live="polite">
         <div class="ok"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#0E5D74" stroke-width="2.4" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></div>
-        <h3>You're almost in!</h3>
-        <p><b>One last step:</b> claim your seat on Riverside. That's where your personal join link comes from, and it sends your calendar invite and reminders.</p>
-        <a class="btn btn-gold" href="https://riverside.com/webinar/registration/eyJldmVudElkIjoiNmFlMjk1NmQ0ZDE2NGQ5YzlmYWI3OTExIiwic2x1ZyI6Imdlb3JnYW5kZXotbW9ycmlzb25zLXN0dWRpbyJ9" target="_blank" rel="noopener">Claim my seat on Riverside</a>
-        <p class="help">Thursday, Nov 5 · 8 to 10 PM Eastern · <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=The%20Virtual%20Assistant%20Blueprint%20with%20Georgandez&amp;dates=20261106T010000Z/20261106T030000Z&amp;details=Free%20live%20class%20on%20Riverside.%20Join%20with%20the%20link%20Riverside%20emailed%20you%2C%20or%20register%20here%3A%20https://riverside.com/webinar/registration/eyJldmVudElkIjoiNmFlMjk1NmQ0ZDE2NGQ5YzlmYWI3OTExIiwic2x1ZyI6Imdlb3JnYW5kZXotbW9ycmlzb25zLXN0dWRpbyJ9&amp;location=Riverside%20(online)" target="_blank" rel="noopener">Google Calendar</a> · <a href="va-blueprint.ics">Apple / Outlook</a></p>
+        <h3>You're in!</h3>
+        <p id="done-msg">Your seat is saved. Check your inbox: your personal join link and calendar invite are on the way, plus a welcome note from me.</p>
+        <a class="btn btn-gold" id="join-btn" href="https://riverside.com/webinar/registration/eyJldmVudElkIjoiNmFlMjk1NmQ0ZDE2NGQ5YzlmYWI3OTExIiwic2x1ZyI6Imdlb3JnYW5kZXotbW9ycmlzb25zLXN0dWRpbyJ9" target="_blank" rel="noopener" hidden>Save my join link</a>
+        <a class="btn btn-gold" id="fallback-btn" href="https://riverside.com/webinar/registration/eyJldmVudElkIjoiNmFlMjk1NmQ0ZDE2NGQ5YzlmYWI3OTExIiwic2x1ZyI6Imdlb3JnYW5kZXotbW9ycmlzb25zLXN0dWRpbyJ9" target="_blank" rel="noopener" hidden>Confirm my seat</a>
+        <p class="help">Thursday, Nov 5 · 8 to 10 PM Eastern · Add to <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=The%20Virtual%20Assistant%20Blueprint%20with%20Georgandez&amp;dates=20261106T010000Z/20261106T030000Z&amp;details=Free%20live%20class%20on%20Riverside.%20Join%20with%20the%20link%20Riverside%20emailed%20you%2C%20or%20register%20here%3A%20https://riverside.com/webinar/registration/eyJldmVudElkIjoiNmFlMjk1NmQ0ZDE2NGQ5YzlmYWI3OTExIiwic2x1ZyI6Imdlb3JnYW5kZXotbW9ycmlzb25zLXN0dWRpbyJ9&amp;location=Riverside%20(online)" target="_blank" rel="noopener">Google Calendar</a> · <a href="va-blueprint.ics">Apple / Outlook</a></p>
       </div>
       <iframe name="brevo-frame" id="brevo-frame" title="Form submission" style="display:none"></iframe>
     </div>
@@ -355,7 +362,7 @@ footer{background:var(--ink);color:#D9CFC4;padding:48px 0}
   <div class="wrap faq">
     <h2>Questions</h2>
     <details><summary>Is it really free?</summary><p>Yes. No card, no catch. This is my first live class, and I'm opening it up for free to people who are serious about getting started.</p></details>
-    <details><summary>How do I get the class link?</summary><p>Sign up on this page, then claim your seat on Riverside (you'll get the button right after signing up, and again in your welcome email). Riverside emails your personal join link with a calendar invite and sends reminders the day before and an hour before.</p></details>
+    <details><summary>How do I get the class link?</summary><p>Just fill out the form on this page. Right after, you'll get an email with your personal join link and a calendar invite, plus reminders the day before and an hour before the class.</p></details>
     <details><summary>Where is the class held?</summary><p>Live online on Riverside, 8 to 10 PM Eastern. You'll join right from your browser, no download needed. Chrome or Edge works best.</p></details>
     <details><summary>Do I need client experience?</summary><p>No. An admin background helps, but you don't need past clients. Bring a laptop, a notebook and an open mind. We'll build from where you are.</p></details>
   </div>
@@ -374,25 +381,47 @@ footer{background:var(--ink);color:#D9CFC4;padding:48px 0}
 
 <script>
 (function(){
+  var EVENT_ID='6ae2956d4d164d9c9fab7911';
   var form=document.getElementById('signup');
   var frame=document.getElementById('brevo-frame');
   var done=document.getElementById('done');
   var btn=document.getElementById('submit-btn');
   var errBox=document.getElementById('form-error');
-  var submitted=false, timer=null;
+  var last=document.getElementById('f-last');
+  var submitted=false, timer=null, river={ok:false,link:null};
 
   function setBad(el,bad){var f=el.closest('.field'); if(f) f.classList.toggle('bad',bad);}
   function valid(){
     var ok=true;
     var name=form.FIRSTNAME, email=form.EMAIL, phone=form.SMS, admin=form.ADMIN_EXPERIENCE;
     var n=name.value.trim().length>0; setBad(name,!n); ok=ok&&n;
+    var l=last.value.trim().length>0; setBad(last,!l); ok=ok&&l;
     var e=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim()); setBad(email,!e); ok=ok&&e;
-    var digits=phone.value.replace(/\D/g,''); var p=digits.length>=7&&digits.length<=12; setBad(phone,!p); ok=ok&&p;
+    var digits=phone.value.replace(/\D/g,''); var p=digits.length>=7&&digits.length<=15; setBad(phone,!p); ok=ok&&p;
     var a=admin.value!==''; setBad(admin,!a); ok=ok&&a;
     return ok;
   }
+  function registerRiverside(){
+    var q=new URLSearchParams(location.search);
+    var body={name:form.FIRSTNAME.value.trim(),lastName:last.value.trim(),email:form.EMAIL.value.trim(),customFields:[],
+      utmSource:q.get('utm_source'),utmMedium:q.get('utm_medium'),utmCampaign:q.get('utm_campaign'),utmTerm:q.get('utm_term'),utmContent:q.get('utm_content'),referrer:document.referrer||null};
+    var ctrl=('AbortController' in window)?new AbortController():null;
+    var t=setTimeout(function(){ if(ctrl) ctrl.abort(); },10000);
+    return fetch('https://riverside.com/api/v4/webinar/'+EVENT_ID+'/register',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'omit',body:JSON.stringify(body),signal:ctrl?ctrl.signal:undefined})
+      .then(function(r){
+        if(r.status===201){ return r.json().catch(function(){return {};}).then(function(j){ river.ok=true; river.link=(j&&j.webinarLink)||null; }); }
+        return r.json().catch(function(){return {};}).then(function(j){
+          var m=((j&&j.message)||'').toLowerCase();
+          if(m.indexOf('already')>-1){ river.ok=true; }
+        });
+      })
+      .catch(function(){})
+      .then(function(){ clearTimeout(t); });
+  }
   form.addEventListener('submit',function(ev){
-    if(!valid()){ev.preventDefault(); var b=form.querySelector('.field.bad input, .field.bad select'); if(b) b.focus(); return;}
+    ev.preventDefault();
+    if(submitted) return;
+    if(!valid()){ var b=form.querySelector('.field.bad input, .field.bad select'); if(b) b.focus(); return; }
     var cc=form.SMS__COUNTRY_CODE.value.replace(/\D/g,''); var d=form.SMS.value.replace(/\D/g,'').replace(/^0+/,'');
     if(d.indexOf(cc)===0 && d.length-cc.length>=7){ d=d.slice(cc.length); }
     else if(cc.length===4 && cc[0]==='1' && d.indexOf(cc.slice(1))===0 && d.length===10){ d=d.slice(3); }
@@ -400,12 +429,25 @@ footer{background:var(--ink);color:#D9CFC4;padding:48px 0}
     errBox.classList.remove('show');
     btn.disabled=true; btn.textContent='Saving your seat...';
     submitted=true;
-    clearTimeout(timer);
-    timer=setTimeout(function(){ if(submitted){ showDone(); } },6000);
+    registerRiverside().then(function(){
+      HTMLFormElement.prototype.submit.call(form);
+      clearTimeout(timer);
+      timer=setTimeout(function(){ if(submitted){ showDone(); } },6000);
+    });
   });
   frame.addEventListener('load',function(){ if(submitted){ showDone(); } });
-  function showDone(){ submitted=false; clearTimeout(timer); form.style.display='none'; done.classList.add('show'); done.scrollIntoView({behavior:'smooth',block:'center'}); }
+  function showDone(){
+    submitted=false; clearTimeout(timer);
+    if(river.ok){
+      if(river.link){ var j=document.getElementById('join-btn'); j.href=river.link; j.hidden=false; }
+    } else {
+      document.getElementById('done-msg').innerHTML='Your spot is saved. <b>Tap below to confirm your seat</b> and get your personal join link and calendar invite.';
+      document.getElementById('fallback-btn').hidden=false;
+    }
+    form.style.display='none'; done.classList.add('show'); done.scrollIntoView({behavior:'smooth',block:'center'});
+  }
   ['FIRSTNAME','EMAIL','SMS','ADMIN_EXPERIENCE'].forEach(function(n){ form[n].addEventListener('input',function(){ setBad(form[n],false); }); form[n].addEventListener('change',function(){ setBad(form[n],false); }); });
+  last.addEventListener('input',function(){ setBad(last,false); });
 })();
 </script>
 </body>
